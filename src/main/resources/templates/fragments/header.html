@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>...</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
     <!-- Bootstrap Navigation Code -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="header">
         <!-- Feature button -->
-        <a class="navbar-brand" href="/pbl">Nighthawk Coders</a>
+        <a class="navbar-brand" href="/pbl">2 Indians + 2 Asians</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,10 +28,9 @@
                     </div>
                 </li>
             </ul>
-            <!-- Clock display -->
-            <div>
-                <span id="clock"></span>
-            </div>
+
+            <h6>Dark Mode</h6>
+
             <!-- Dark mode action -->
             <div class="custom-control custom-switch">
                 <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
@@ -41,17 +41,13 @@
                 // Dark Mode Toggle
                 function darkFunction() {
                     let element = document.body;
+
                     element.classList.toggle("dark-mode");
                 }
                 // Clock controller
-                let clockElement = document.getElementById('clock');
-                function clock() {
-                    let date = new Date();
-                    clockElement.textContent = date.toLocaleString();
-                }
-                // Clock refresh frequency
-                setInterval(clock, 1000);
+
             </script>
+
         </div>
     </nav>
 </body>
