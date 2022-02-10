@@ -1,20 +1,58 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/headfile :: head">
-  <title>Greeting Input</title>
-</head>
-<body>
-<div th:replace="fragments/header :: header"></div>
-<div class="contact" style="height: 35vh;">
-  <div class="row justify-content-left" style="margin: 2%;">
-    <form action="/greet" method="GET" id="greetForm">
-      <div>
-        <label for="greetField">Type a greeting name?</label>
-        <input name="name" id="greetField">
-        <button>Greetings!</button>
-        <p th:text="'Greetings, ' + ${name} + '!'"></p>
-      </div>
-    </form>
+    <h2 style="text-align:center; font-family:'Javanese Text'";> Study Guide for Students </h2>
+    </br>
+    <div class="input-group rounded">
+      <input type="search" onkeyup="myFunction()" class="form-control rounded" placeholder="Search for topic" aria-label="Search"
+             aria-describedby="search-addon" id="hello" />
+      <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+    </div>
+    <!--        <div class="container-fluid">-->
+    <!--          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topic" title="Type in a topic">-->
+    <!--        </div>-->
+
+    <ul id="myUL">
+      <li><a href="https://www.youtube.com/watch?v=k9TdGU5ZSJ8&ab_channel=BestCollegeAid">How to effectivly Study? </a></li>
+      <li><a href="https://www.youtube.com/watch?v=F7CHww0JeUY&ab_channel=SupertutorTV">How to budget your time? </a></li>
+      <li><a href="https://www.youtube.com/watch?v=RSLp47l-zZ8&ab_channel=VictorLai">Ivies - What it takes </a></li>
+      <li><a href="https://www.youtube.com/watch?v=kWhbz6mSJOA&ab_channel=ConquerCollegeAdmissions">Passion Project - How to build a project with passion </a></li>
+      <li><a href="https://www.youtube.com/watch?v=KynMm9ucC94&ab_channel=AlexisChoi">Internships - How to get it with no experience ? </a></li>
+
+
+    </ul>
+
+    <script>
+      function myFunction() {
+        //declares the varaibles
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("hello");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        // Loops thorught all the items and hides stuff that doesnt match
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+    <!-- End of body content specific to page -->
+  </div></body>
+</table>
+
+</div>
+
+</div>
+
+</html>
   </div>
 </div>
 <div th:replace="fragments/footer :: footer"></div>
