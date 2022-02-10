@@ -17,17 +17,17 @@ public class GPAController {
 
     @PostMapping("GPAController/Gpa")
     @ResponseBody
-    public String Gpa(
+    public int Gpa(
 
     ) {
-        //return GPAOutput.gpa
+        return GPAOutput.gpa(3);
     }
 
 
 }
 
 class GPAOutput {
-    public static int gpa () {
+    public static int gpa (int random) {
         return 5; //random value and what I Want my gpa to be
     }
 
