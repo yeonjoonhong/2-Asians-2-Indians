@@ -1,3 +1,3 @@
 # 2-Asians-2-Indians
 
-Readme here
+Scrum Board: https://github.com/yeonjoonhong/2-Asians-2-Indians/projects/1
