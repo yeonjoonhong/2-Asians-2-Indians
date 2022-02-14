@@ -1,6 +1,6 @@
 package com.example.sping_portfolio.controllers;
 /* MVC code that shows defining a simple Model, calling View, and this file serving as Controller
- * Web Content with Spring MVCSpring Example: https://spring.io/guides/gs/serving-web-con
+ * Web Content with Spring MVCSpring  Example: https://spring.io/guides/gs/serving-web-con
  */
 
 import org.springframework.stereotype.Controller;
