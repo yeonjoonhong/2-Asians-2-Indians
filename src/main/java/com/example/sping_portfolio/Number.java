@@ -1,43 +1,45 @@
 package com.example.sping_portfolio;
+
 import java.util.ArrayList;
 import java.lang.Math;
-import java.util.HashMap
+import java.util.Collections;
+import java.util.HashMap;
 
 // Write a Class Number
 public class Number {
-    // instance variables
 
-    double squirrels;
-    int randNum;
-    HashMap<Integer, Integer> originalIndex = new HashMap<Integer, Integer>();
-
-    // It initializes a random number between 3 and 36, ie the number of squirrels in class
+    static int squirrels;
 
     public Number() {
-
-        squirrels = Math.random();
-        randNum = (int) squirrels * 36;
+        squirrels = (int) (Math.random() * ( 36 - 3 + 1 ) + 3);
 
     }
-    public static void main(String[] args) {
 
-        ArrayList<Number> squirrels = new ArrayList<Number>();
+    public static int getSquirrels(){
+        return squirrels;
+
+    }
+
+    public static void main(String[] args){
+
+        HashMap<Integer, String> index = new HashMap<Integer, String>();
+        ArrayList<Integer> squirrelArray = new ArrayList<Integer>();
 
         for(int i = 0; i < 10; i++){
+            Number number = new Number();
+            int squirrelN = number.getSquirrels();
+            // System.out.println(squirrelN);
+            squirrelArray.add(squirrelN);
+            index.put(squirrelN, Integer.toString(i));
 
         }
 
-        ArrayList<Number> index = new ArrayList<Number>();
-
-        Squirrel1 =
-        // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-
-        // My notes, sort array list and iterate through array list and find key associated with the number on hashmap
-        // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
+        // sort:
+        Collections.sort(squirrelArray);
 
         for(int i = 0; i < 10; i++){
-            System.out.print("Squirrels: " + squirrels.get(i) + " ");
-            System.out.println("Days: " + index.get(i));
+            System.out.print("Squirrels: " + squirrelArray.get(i) + " ");
+            System.out.println("Days: " + index.get(squirrelArray.get(i)));
 
         }
 
