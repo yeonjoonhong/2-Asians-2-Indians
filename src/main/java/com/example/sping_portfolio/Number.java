@@ -2,7 +2,6 @@ package com.example.sping_portfolio;
 
 import java.util.ArrayList;
 import java.lang.Math;
-import java.util.Collections;
 import java.util.HashMap;
 
 // Write a Class Number
@@ -35,7 +34,17 @@ public class Number {
         }
 
         // sort:
-        Collections.sort(squirrelArray);
+        int temp;
+
+        for(int j = 0; j < squirrelArray.size() - 1; j++) {
+            for (int i = 1; i < 10; i++) {
+                if (squirrelArray.get(i) < squirrelArray.get(i - 1)) {
+                    temp = squirrelArray.get(i);
+                    squirrelArray.set(i, squirrelArray.get(i - 1));
+                    squirrelArray.set(i - 1, temp);
+                }
+            }
+        }
 
         for(int i = 0; i < 10; i++){
             System.out.print("Squirrels: " + squirrelArray.get(i) + " ");
