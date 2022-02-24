@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+  <title>M22-P1 2A2I</title>
+  <link rel="stylesheet" href="css/PlannerNotecards.css" >
+</div></head>
+
+<body>
+<!-- Header of Page, includes Navigation -->
+<div th:replace="fragments/header :: header"></div>
+
+<!-- Body defaults to ellipses, details are added by ThymeLeaf layout fragment -->
+<div layout:fragment="content">
+  <div class = "note">
+    <h2>Planner Notecards</h2>
+    <div class = "note-input">
+      <h3>Add A New Note: </h3>
+      <div class = "note-wrapper">
+        <input type = "text" id = "note-title" placeholder="Title of the note">
+        <textarea rows = "5" placeholder="Write your note here ... " id = "note-content"></textarea>
+        <button type = "button" class = "btn" id = "add-note-btn">
+          <span><i class = "fas fa-plus"></i></span>
+          Add Note
+        </button>
+      </div>
+    </div>
+
+    <div class = "note-list">
+      <!-- note item -->
+      <!-- <div class = "note-item">
+        <h3>The Title Goes Here</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugit omnis expedita porro adipisci, asperiores facere ea. Voluptates quos quia consequatur explicabo. Perspiciatis, repellat. Ea facere dolorum a iste maiores!</p>
+        <button type = "button" class = "btn delete-note-btn">
+          <span><i class = "fas fa-trash"></i></span>
+          Remove
+        </button>
+      </div> -->
+    </div>
+
+    <button type = "button" class = "btn" id = "delete-all-btn">
+      <span><i class = "fas fa-trash"></i></span>
+      Delete All
+    </button>
+
+    <script src="js/PlannerNotecards.js"></script>
+
+  </div>
+
+</div>
+
+</div>
+
+</body>
+
+
+
+</html>
