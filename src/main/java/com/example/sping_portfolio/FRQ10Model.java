@@ -31,6 +31,9 @@ public class FRQ10Model extends NumberSystem{
             System.out.println("please input 1 or 2");
         }
 
+        System.out.println();
+        main (null);
+
     }
 
 
