@@ -10,3 +10,8 @@ Technicals:
 - GPA calculator 
 - MVC techincals 
 - TO-DO list for students 
+
+
+# Main Idea 
+
+This website was desigend to assist students with the acedmic pressures of Del Norte High School. We have videos, planners, and gpa calculators that are designed to help the student. Furthermore, we have created a feedback page that helps the students report any errors in the code. 
